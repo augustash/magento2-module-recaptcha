@@ -4,7 +4,7 @@
     <system>
         <section id="monashee_recaptcha" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Recaptcha Configuration</label>
-            <tab>service</tab>
+            <tab>augustash</tab>
             <resource>Monashee_Recaptcha::recaptcha</resource>
             <group id="settings" type="text"  sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                 <label>Extension Settings</label>
@@ -20,6 +20,24 @@
                 <field id="secret_key" translate="label" type="text" sortOrder="30"
                        showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Secret Key</label>
+                </field>
+
+                <field id="enabled_in_customer_registration" translate="label" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled for Customer Registration</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="enabled_in_forgotpassword" translate="label" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled for Forgot Password</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="enabled_in_contact_form" translate="label" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled for Contact Form</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
         </section>

@@ -36,19 +36,27 @@ class Post
     protected $dataHelper;
 
     /**
+     * @var DataPersistorInterface
+     */
+    protected $dataPersistor;
+
+    /**
      * Post constructor.
      * @param RedirectFactory $resultRedirectFactory
      * @param ManagerInterface $messageManager
      * @param Data $dataHelper
+     * @param DataPersistorInterface $dataPersistor
      */
     public function __construct(
         RedirectFactory $resultRedirectFactory,
         ManagerInterface $messageManager,
-        Data $dataHelper
+        Data $dataHelper,
+        DataPersistorInterface $dataPersistor
     ) {
         $this->resultRedirectFactory = $resultRedirectFactory;
         $this->messageManager = $messageManager;
         $this->dataHelper = $dataHelper;
+        $this->dataPersistor = $dataPersistor;
     }
 
     /**
@@ -62,7 +70,7 @@ class Post
         \Magento\Contact\Controller\Index\Post $subject,
         \Closure $proceed
     ) {
-        if ($this->dataHelper->isEnabled()) {
+        if ($this->dataHelper->isEnabledInContactForm()) {
             $request = $subject->getRequest();
             $recaptchaResponse = $request->getPost('g-recaptcha-response');
 
@@ -84,9 +92,9 @@ class Post
             }
 
             if ($hasError) {
-                $dataPersistor = ObjectManager::getInstance()->get(DataPersistorInterface::class);
+                // $dataPersistor = ObjectManager::getInstance()->get(DataPersistorInterface::class);
                 $post = $request->getPostValue();
-                $dataPersistor->set('contact_us', $post);
+                $this->dataPersistor->set('contact_us', $post);
 
                 return $this->recaptchaError();
             }
@@ -100,7 +108,7 @@ class Post
      *
      * @return \Magento\Framework\Controller\Result\Redirect
      */
-    protected function recaptchaError(): \Magento\Framework\Controller\Result\Redirect
+    protected function recaptchaError()
     {
         $resultRedirect = $this->resultRedirectFactory->create();
         $this->messageManager->addErrorMessage(__('There was an error with the Recaptcha, please try again.'));

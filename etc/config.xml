@@ -5,8 +5,11 @@
         <monashee_recaptcha>
             <settings>
                 <enabled>0</enabled>
-                <site_key>sitekey</site_key>
-                <secret_key>secretkey</secret_key>
+                <site_key></site_key>
+                <secret_key></secret_key>
+                <enabled_in_customer_registration>0</enabled_in_customer_registration>
+                <enabled_in_forgotpassword>0</enabled_in_forgotpassword>
+                <enabled_in_contact_form>0</enabled_in_contact_form>
             </settings>
         </monashee_recaptcha>
     </default>
