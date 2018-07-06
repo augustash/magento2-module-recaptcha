@@ -16,12 +16,12 @@ https://www.google.com/recaptcha/
 
 Under Stores -> Configuration -> August Ash Extensions -> Recaptcha Configuration -> Extension Settings
 
-Enabled -> Yes/No
-Site Key -> from Recaptcha website
-Secret Key -> from Recaptcha website
-Enabled for Customer Registration -> Yes/No
-Enabled for Forgot Password -> Yes/No
-Enabled for Contact Form -> Yes/No
++ Enabled -> Yes/No
++ Site Key -> from Recaptcha website
++ Secret Key -> from Recaptcha website
++ Enabled for Customer Registration -> Yes/No
++ Enabled for Forgot Password -> Yes/No
++ Enabled for Contact Form -> Yes/No
 
 
 ## Install
