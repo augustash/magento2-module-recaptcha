@@ -14,11 +14,14 @@ You need to register your site with Google Recaptcha.
 
 https://www.google.com/recaptcha/
 
-Under Stores -> Configuration -> Services -> Recaptcha Configuration -> Extension Settings
+Under Stores -> Configuration -> August Ash Extensions -> Recaptcha Configuration -> Extension Settings
 
-Enabled -> Yes  
-Site Key -> from Recaptcha website  
+Enabled -> Yes/No
+Site Key -> from Recaptcha website
 Secret Key -> from Recaptcha website
+Enabled for Customer Registration -> Yes/No
+Enabled for Forgot Password -> Yes/No
+Enabled for Contact Form -> Yes/No
 
 
 ## Install
@@ -26,17 +29,16 @@ Secret Key -> from Recaptcha website
 #### Composer
 
 ```bash
-composer require monashee/module-recaptcha
+composer config repositories.monashee-recaptcha vcs https://github.com/augustash/magento2-module-recaptcha.git
+composer require monashee/module-recaptcha:dev-master
 ```
 
 Enable Module
 
 ```php
 php bin/magento module:enable Monashee_Recaptcha
-
 php bin/magento setup:upgrade
-
-php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy
 ```
 
 You may need to Flush Magento Cache after installation.
