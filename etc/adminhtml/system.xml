@@ -1,41 +1,34 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="monashee_recaptcha" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Recaptcha Configuration</label>
             <tab>augustash</tab>
             <resource>Monashee_Recaptcha::recaptcha</resource>
-            <group id="settings" type="text"  sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+            <group id="settings" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                 <label>Extension Settings</label>
-                <field id="enabled" translate="label" type="select" sortOrder="10"
-                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="site_key" translate="label" type="text" sortOrder="20"
-                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="site_key" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Site Key</label>
                 </field>
-                <field id="secret_key" translate="label" type="text" sortOrder="30"
-                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="secret_key" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Secret Key</label>
                 </field>
 
-                <field id="enabled_in_customer_registration" translate="label" type="select" sortOrder="31"
-                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="enabled_in_customer_registration" translate="label" type="select" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Enabled for Customer Registration</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
-                <field id="enabled_in_forgotpassword" translate="label" type="select" sortOrder="32"
-                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="enabled_in_forgotpassword" translate="label" type="select" sortOrder="32" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Enabled for Forgot Password</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
-                <field id="enabled_in_contact_form" translate="label" type="select" sortOrder="33"
-                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="enabled_in_contact_form" translate="label" type="select" sortOrder="33" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Enabled for Contact Form</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>

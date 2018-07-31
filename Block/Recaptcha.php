@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Magento 2 Recaptcha for Contact Page, Customer Create, and Forgot Password
  * Copyright (C) 2017  Derek Marcinyshyn
@@ -18,14 +19,14 @@ class Recaptcha extends Template
 {
 
     /**
-     * @var Data
+     * @var \Monashee\Recaptcha\Helper\Data
      */
     protected $dataHelper;
 
     /**
      * Recaptcha constructor.
-     * @param Template\Context $context
-     * @param Data $dataHelper
+     * @param \Magento\Framework\View\Element\Template\Context $context
+     * @param \Monashee\Recaptcha\Helper\Data $dataHelper
      * @param array $data
      */
     public function __construct(

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Magento 2 Recaptcha for Contact Page, Customer Create, and Forgot Password
  * Copyright (C) 2017  Derek Marcinyshyn
@@ -42,10 +43,10 @@ class Post
 
     /**
      * Post constructor.
-     * @param RedirectFactory $resultRedirectFactory
-     * @param ManagerInterface $messageManager
-     * @param Data $dataHelper
-     * @param DataPersistorInterface $dataPersistor
+     * @param \Magento\Framework\Controller\Result\RedirectFactory $resultRedirectFactory
+     * @param \Magento\Framework\Message\ManagerInterface $messageManager
+     * @param \Monashee\Recaptcha\Helper\Data $dataHelper
+     * @param \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor
      */
     public function __construct(
         RedirectFactory $resultRedirectFactory,
