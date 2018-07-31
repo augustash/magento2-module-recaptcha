@@ -16,8 +16,6 @@ use Magento\Store\Model\ScopeInterface;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
-
-use Augustash\Logger\Helper\Data as AshLogger;
 use Magento\Framework\Exception\LocalizedException;
 
 class Data extends AbstractHelper
@@ -29,12 +27,6 @@ class Data extends AbstractHelper
     const XML_PATH_ENABLED_IN_FORGOT_PASSWORD = 'monashee_recaptcha/settings/enabled_in_forgotpassword';
     const XML_PATH_ENABLED_IN_CONTACT_FORM = 'monashee_recaptcha/settings/enabled_in_contact_form';
 
-
-    /**
-     * @var \Augustash\Logger\Helper\Data
-     */
-    protected $logger;
-
     /**
      * @var \Magento\Store\Model\StoreManagerInterface
      */
@@ -42,14 +34,14 @@ class Data extends AbstractHelper
 
     /**
      * Data constructor.
-     * @param Context $context
+     *
+     * @param \Magento\Framework\App\Helper\Context $context
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
-        AshLogger $logger,
         \Magento\Store\Model\StoreManagerInterface $storeManager
     ) {
-        $this->logger = $logger;
         $this->storeManager = $storeManager;
         parent::__construct($context);
     }

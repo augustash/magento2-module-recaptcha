@@ -4,7 +4,6 @@
 	<module name="Monashee_Recaptcha" setup_version="1.0.0">
 		<sequence>
 			<module name="Augustash_Core"/>
-			<module name="Augustash_Logger"/>
 		</sequence>
 	</module>
 </config>
