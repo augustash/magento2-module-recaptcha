@@ -4,8 +4,8 @@
 
 Magento 2 module that adds the Google Recaptcha on Contact Form, Customer create and Forgot Password pages.
 
-
 ## Screenshot
+
 ![settings screenshot](https://raw.githubusercontent.com/DerekMarcinyshyn/module-recaptcha/master/settings-screenshot.png)
 
 ## Register
@@ -23,10 +23,9 @@ Under Stores -> Configuration -> August Ash Extensions -> Recaptcha Configuratio
 + Enabled for Forgot Password -> Yes/No
 + Enabled for Contact Form -> Yes/No
 
-
 ## Install
 
-#### Composer
+### Composer
 
 ```bash
 composer config repositories.monashee-recaptcha vcs https://github.com/augustash/magento2-module-recaptcha.git

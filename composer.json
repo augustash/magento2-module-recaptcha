@@ -2,8 +2,8 @@
     "name": "monashee/module-recaptcha",
     "description": "Magento 2 Recaptcha for Contact Page, Customer Create, and Forgot Password",
     "keywords": [
-      "magento 2",
-      "recaptcha"
+        "magento 2",
+        "recaptcha"
     ],
     "license": "OSL-3.0",
     "authors": [
